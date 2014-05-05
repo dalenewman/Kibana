@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2F305FA-849B-4F69-8058-ADEE1129E11C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kibana</RootNamespace>
+    <AssemblyName>Kibana</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\config.js" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.dark.min.css" />
+    <Content Include="css\bootstrap.light.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\normalize.min.css" />
+    <Content Include="css\timepicker.css" />
+    <Content Include="app\app.js" />
+    <Content Include="app\components\require.config.js" />
+    <Content Include="app\dashboards\logstash.js" />
+    <Content Include="app\factories\store.js" />
+    <Content Include="app\panels\bettermap\editor.html" />
+    <Content Include="app\panels\bettermap\leaflet\images\layers-2x.png" />
+    <Content Include="app\panels\bettermap\leaflet\images\layers.png" />
+    <Content Include="app\panels\bettermap\leaflet\images\marker-icon-2x.png" />
+    <Content Include="app\panels\bettermap\leaflet\images\marker-icon.png" />
+    <Content Include="app\panels\bettermap\leaflet\images\marker-shadow.png" />
+    <Content Include="app\panels\bettermap\leaflet\leaflet.css" />
+    <Content Include="app\panels\bettermap\leaflet\leaflet.ie.css" />
+    <Content Include="app\panels\bettermap\leaflet\leaflet.js" />
+    <Content Include="app\panels\bettermap\leaflet\plugins.css" />
+    <Content Include="app\panels\bettermap\leaflet\plugins.js" />
+    <Content Include="app\panels\bettermap\module.css" />
+    <Content Include="app\panels\bettermap\module.html" />
+    <Content Include="app\panels\bettermap\module.js" />
+    <Content Include="app\panels\column\editor.html" />
+    <Content Include="app\panels\column\module.html" />
+    <Content Include="app\panels\column\module.js" />
+    <Content Include="app\panels\column\panelgeneral.html" />
+    <Content Include="app\panels\dashcontrol\editor.html" />
+    <Content Include="app\panels\dashcontrol\module.html" />
+    <Content Include="app\panels\dashcontrol\module.js" />
+    <Content Include="app\panels\derivequeries\editor.html" />
+    <Content Include="app\panels\derivequeries\module.html" />
+    <Content Include="app\panels\derivequeries\module.js" />
+    <Content Include="app\panels\fields\editor.html" />
+    <Content Include="app\panels\fields\micropanel.html" />
+    <Content Include="app\panels\fields\module.html" />
+    <Content Include="app\panels\fields\module.js" />
+    <Content Include="app\panels\filtering\editor.html" />
+    <Content Include="app\panels\filtering\meta.html" />
+    <Content Include="app\panels\filtering\module.html" />
+    <Content Include="app\panels\filtering\module.js" />
+    <Content Include="app\panels\goal\editor.html" />
+    <Content Include="app\panels\goal\module.html" />
+    <Content Include="app\panels\goal\module.js" />
+    <Content Include="app\panels\histogram\editor.html" />
+    <Content Include="app\panels\histogram\module.html" />
+    <Content Include="app\panels\histogram\module.js" />
+    <Content Include="app\panels\histogram\queriesEditor.html" />
+    <Content Include="app\panels\histogram\styleEditor.html" />
+    <Content Include="app\panels\hits\editor.html" />
+    <Content Include="app\panels\hits\module.html" />
+    <Content Include="app\panels\hits\module.js" />
+    <Content Include="app\panels\map\editor.html" />
+    <Content Include="app\panels\map\lib\map.europe.js" />
+    <Content Include="app\panels\map\lib\map.usa.js" />
+    <Content Include="app\panels\map\lib\map.world.js" />
+    <Content Include="app\panels\map\module.html" />
+    <Content Include="app\panels\map\module.js" />
+    <Content Include="app\panels\query\editor.html" />
+    <Content Include="app\panels\query\editors\lucene.html" />
+    <Content Include="app\panels\query\editors\regex.html" />
+    <Content Include="app\panels\query\editors\topN.html" />
+    <Content Include="app\panels\query\helpModal.html" />
+    <Content Include="app\panels\query\help\lucene.html" />
+    <Content Include="app\panels\query\help\regex.html" />
+    <Content Include="app\panels\query\help\topN.html" />
+    <Content Include="app\panels\query\meta.html" />
+    <Content Include="app\panels\query\module.html" />
+    <Content Include="app\panels\query\module.js" />
+    <Content Include="app\panels\query\query.css" />
+    <Content Include="app\panels\sparklines\editor.html" />
+    <Content Include="app\panels\sparklines\module.html" />
+    <Content Include="app\panels\sparklines\module.js" />
+    <Content Include="app\panels\stats\editor.html" />
+    <Content Include="app\panels\stats\module.html" />
+    <Content Include="app\panels\stats\module.js" />
+    <Content Include="app\panels\table\editor.html" />
+    <Content Include="app\panels\table\micropanel.html" />
+    <Content Include="app\panels\table\modal.html" />
+    <Content Include="app\panels\table\module.html" />
+    <Content Include="app\panels\table\module.js" />
+    <Content Include="app\panels\table\pagination.html" />
+    <Content Include="app\panels\terms\editor.html" />
+    <Content Include="app\panels\terms\module.html" />
+    <Content Include="app\panels\terms\module.js" />
+    <Content Include="app\panels\text\editor.html" />
+    <Content Include="app\panels\text\module.html" />
+    <Content Include="app\panels\text\module.js" />
+    <Content Include="app\panels\timepicker\custom.html" />
+    <Content Include="app\panels\timepicker\editor.html" />
+    <Content Include="app\panels\timepicker\module.html" />
+    <Content Include="app\panels\timepicker\module.js" />
+    <Content Include="app\panels\timepicker\refreshctrl.html" />
+    <Content Include="app\panels\trends\editor.html" />
+    <Content Include="app\panels\trends\module.html" />
+    <Content Include="app\panels\trends\module.js" />
+    <Content Include="app\partials\dashboard.html" />
+    <Content Include="app\partials\dasheditor.html" />
+    <Content Include="app\partials\dashLoader.html" />
+    <Content Include="app\partials\dashLoaderShare.html" />
+    <Content Include="app\partials\inspector.html" />
+    <Content Include="app\partials\load.html" />
+    <Content Include="app\partials\modal.html" />
+    <Content Include="app\partials\paneladd.html" />
+    <Content Include="app\partials\paneleditor.html" />
+    <Content Include="app\partials\panelgeneral.html" />
+    <Content Include="app\partials\querySelect.html" />
+    <Content Include="app\partials\roweditor.html" />
+    <Content Include="font\fontawesome-webfont.svg" />
+    <Content Include="img\annotation-icon.png" />
+    <Content Include="img\cubes.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\kibana.png" />
+    <Content Include="img\light.png" />
+    <Content Include="img\load.gif" />
+    <Content Include="img\load_big.gif" />
+    <Content Include="img\small.png" />
+    <Content Include="vendor\bootstrap\less\tests\buttons.html" />
+    <Content Include="vendor\bootstrap\less\tests\css-tests.css" />
+    <Content Include="vendor\bootstrap\less\tests\css-tests.html" />
+    <Content Include="vendor\bootstrap\less\tests\forms-responsive.html" />
+    <Content Include="vendor\bootstrap\less\tests\forms.html" />
+    <Content Include="vendor\bootstrap\less\tests\navbar-fixed-top.html" />
+    <Content Include="vendor\bootstrap\less\tests\navbar-static-top.html" />
+    <Content Include="vendor\bootstrap\less\tests\navbar.html" />
+    <Content Include="vendor\require\css-build.js" />
+    <Content Include="vendor\require\require.js" />
+    <Content Include="vendor\require\tmpl.js" />
+    <Content Include="vendor\timezone.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Module.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
+      <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>
+      <Name>Orchard.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
+      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Name>Orchard.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditorTemplates\Parts\Kibana.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\dashboards\blank.json" />
+    <Content Include="app\dashboards\default.json" />
+    <Content Include="app\dashboards\guided.json" />
+    <Content Include="app\dashboards\logstash.json" />
+    <Content Include="app\dashboards\noted.json" />
+    <Content Include="font\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome-webfont.woff" />
+    <Content Include="font\FontAwesome.otf" />
+    <Content Include="vendor\LICENSE.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="font\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\KibanaController.cs" />
+    <Compile Include="Drivers\KibanaPartDriver.cs" />
+    <Compile Include="Handlers\KibanaPartHandler.cs" />
+    <Compile Include="Migrations.cs" />
+    <Compile Include="Models\KibanaPart.cs" />
+    <Compile Include="Models\KibanaPartRecord.cs" />
+    <Compile Include="Routes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vendor\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Kibana\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.dark.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.light.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Placement.info">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

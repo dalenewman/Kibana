@@ -1,0 +1,11 @@
+﻿Name: Kibana
+AntiForgery: disabled
+Author: Dale Newman
+Website: https://github.com/dalenewman
+Version: 0.0.4
+OrchardVersion: 1.7.1
+Description: Kibana 3.0.1
+Features:
+    Kibana:
+        Description: Kibana 3.0.1
+		Category: Content
