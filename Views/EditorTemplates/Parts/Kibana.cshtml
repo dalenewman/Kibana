@@ -1,0 +1,22 @@
+﻿@model Kibana.Models.KibanaPart
+    
+<div class="editor-field">
+    @Html.LabelFor(x => x.Elasticsearch, T("Elasticsearch"))
+    @Html.TextBoxFor(x => x.Elasticsearch , new { @class = "large text" })
+    @Html.ValidationMessageFor(x => x.Elasticsearch)
+</div>
+<div class="hint">@T("Elasticsearch url.  Can be an absolute url, or a relative url if using the Proxy module.")</div>
+
+<div class="editor-field">
+    @Html.LabelFor(x => x.DefaultRoute, T("Default Route"))
+    @Html.TextBoxFor(x => x.DefaultRoute , new { @class = "large text" })
+    @Html.ValidationMessageFor(x => x.DefaultRoute)
+</div>
+<div class="hint">@T("This is the default landing page when you don't specify a dashboard to load. You can specify files, scripts or saved dashboards here. For example, if you had saved a dashboard called 'WebLogs' to elasticsearch you might use: '/dashboard/elasticsearch/WebLogs'")</div>
+
+<div class="editor-field">
+    @Html.LabelFor(x => x.KibanaIndex, T("Kibana Index"))
+    @Html.TextBoxFor(x => x.KibanaIndex , new { @class = "large text" })
+    @Html.ValidationMessageFor(x => x.KibanaIndex)
+</div>
+<div class="hint">@T("The default ES index to use for storing Kibana specific object such as stored dashboards.")</div>
