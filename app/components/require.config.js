@@ -38,6 +38,7 @@ require.config({
         "jquery.flot.byte": "../vendor/jquery/jquery.flot.byte",
         modernizr: "../vendor/modernizr-2.6.1",
         numeral: "../vendor/numeral",
+        jsonpath: "../vendor/jsonpath",
         elasticjs: "../vendor/elasticjs/elastic-angular-client"
     }, shim: {
          angular: {
@@ -46,7 +47,10 @@ require.config({
          }, bootstrap: {
               deps: ["jquery"]
          }, modernizr: {
-              exports: "Modernizr"
+             exports: "Modernizr"
+         },
+         jsonpath: {
+             exports: "jsonPath"
          }, jquery: {
               exports: "jQuery"
          }, "jquery-ui": ["jquery"],

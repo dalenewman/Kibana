@@ -1,5 +1,5 @@
-Copyright 2012-2013 Kibana, Elasticsearch BV
-Copyright 2014 Orchard CMS Kibana module, Dale Newman
+Copyright 2012-2013 Elasticsearch BV
+Copyright 2014 Dale Newman (for Orchard CMS Kibana module)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you
 may not use this file except in compliance with the License. You may
